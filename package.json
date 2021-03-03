@@ -1,0 +1,15 @@
+{
+  "name": "fastify_demo",
+  "version": "1.0.0",
+  "description": "test demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "Aditya panther --watch js",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.13.0",
+    "nodemon": "^2.0.7"
+  }
+}
