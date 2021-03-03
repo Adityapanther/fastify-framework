@@ -1,8 +1,12 @@
 var fastify = require('fastify');
 var app = fastify({logger: true});
 
+// register routes
+
+app.register(require('./routes/firstRoutes'));
+
 app.get('/', (req, res) =>{
-    res.send("hello i am")
+    return "hello";
 })
 
 app.listen("3000", (err, addr)=>{
