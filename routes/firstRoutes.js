@@ -18,6 +18,27 @@ async function hell(app, options) {
             return na[0]
         }
     })
+
+    const validSchema = {
+        schema:{
+            body: {
+                type: 'object',
+                properties: {
+                    name: {
+                        type: 'string'
+                    },
+                    age: {
+                        type: 'number'
+                    }
+                },
+                required :['name']
+            }
+        }
+    }
+
+    app.post("/valid", validSchema, async (req, rep)=>{
+        return req.body.age;
+    })
 }
 
 module.exports = hell;
